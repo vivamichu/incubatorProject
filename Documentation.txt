@@ -1,0 +1,65 @@
+Our database is a class named noSQLDatabase
+
+1. To create your own database call: 
+
+db = NoSQLDatabase("example_db")
+
+this line will create a seperate example_db.json file for your database and you can access its contents by calling variable "db"
+
+2. To create a table inside the database call: 
+
+db.create_table("students")
+
+this line will create a table inside your example_db.json file, you can create as many tables as you want
+
+3. To create a row in your table call: 
+
+db.insert_row("students", {"name": "Alice", "age": 22, "average_grade": 4.5})
+
+this will insert a row inside your table "students"
+
+4. You can filter and get the filtered data from the table, call: 
+
+db.select_rows("students", filter_fn=filter_fn)
+
+this will return the data applying the filter_fn function that you will provide. 
+
+5. You can sort the data in the table, by calling: 
+
+db.select_rows("students", sort_fn=sort_fn)
+
+this will return a sorted row with sort_fn function applied 
+
+6. You can update the information in a row by calling: 
+
+db.update_rows("students", filter_fn=filter_fn, update_fn=update_fn)
+
+this will update the row applying the function update_fn that you will define. To select which data to update, you apply a filter_fn. 
+
+7. You can delete some rows or clean it, by calling:
+
+db.delete_rows("students", filter_fn=filter_fn) or db.clean_row(self, table_name, row_id)
+
+this will either delete the row applying the filter_fn or by row id. 
+
+8. The most interesting part is that you can PLOT your tables, for that call: 
+
+NoSQLDatabase.plot_table_data("example_db") 
+
+this will plot the table with rows, super useful to visualize your data
+
+9. You can save images and documents, files in this database. For this, call: 
+
+db.save_data_file(self, filename, data)
+
+this will save the image as a binary decoded file in folder files. If you don't need it, you can just save the image including its path using step 3. 
+
+10. You can retrieve saved images and display them, by calling: 
+
+db.display_image("users", 1)
+
+this will display an image with id '1' in a table 'users'
+
+
+Have fun!
+
