@@ -5,6 +5,7 @@ There are two ways to run and interact with the database.
 
 1. by running the noSQL.py file
 2. by running noSQL.ipynb file
+I suggest you to use the jupyter notebook version as I included testacases there. 
 
 1. 
 
